@@ -39,7 +39,9 @@ console.dir(newBtn);
 let para = document.querySelector("p");
 para.after(newBtn);
 
-let div = document.querySelector("div");
+
 let newHeading = document.createElement("h1");
-newHeading.innerText = "Learning AI Engineering";
-div.before(newHeading);
+newHeading.innerHTML = "<i>Learning AI Engineering!</i>";
+document.querySelector("body").prepend(newHeading);
+
+para.remove();
