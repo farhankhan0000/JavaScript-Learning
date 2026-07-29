@@ -1,4 +1,4 @@
-.heading-class{
+/* .heading-class{
     color: blue;
     background-color: yellow;
     
@@ -12,4 +12,14 @@ body{
 button{
     background-color: blue;
     color: white;
+} */
+
+#box{
+    height: 250px;
+    width: 100px;
+    background-color: dodgerblue;
+    color: white;
+    border: solid;
+    border-width: 1px;
+    border-color: black;
 }

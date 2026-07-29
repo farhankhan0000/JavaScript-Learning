@@ -5,7 +5,41 @@
 
 // console.dir(document.body.firstChild);
 
-let div = document.querySelector("div");
-console.dir("div");
+// let div = document.querySelector("div");
+// console.dir("div");
 
-let heading = document.querySelector("h1");
+// let heading = document.querySelector("h1");
+
+// let div = document.querySelector("div");
+// console.log(div);
+
+// let id = div.getAttribute("id");
+// console.log(id);
+
+// let name = div.getAttribute("name");
+// console.log(name);
+
+// let para = document.querySelector("p");
+// console.log(para);
+
+// console.log(para.setAttribute("class", "newClass"));
+
+// let div = document.querySelector("div");
+// div.style.backgroundColor = "green";
+// div.style.backgroundColor = "purple";
+
+// div.style.fontSize = "26px";
+
+// div.innerText = "Hello";
+
+let newBtn = document.createElement("button");
+newBtn.innerText = "Click me";
+console.dir(newBtn);
+
+let para = document.querySelector("p");
+para.after(newBtn);
+
+let div = document.querySelector("div");
+let newHeading = document.createElement("h1");
+newHeading.innerText = "Learning AI Engineering";
+div.before(newHeading);
