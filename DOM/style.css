@@ -13,7 +13,7 @@ button{
     background-color: blue;
     color: white;
 } */
-
+/* 
 #box{
     height: 250px;
     width: 100px;
@@ -22,4 +22,14 @@ button{
     border: solid;
     border-width: 1px;
     border-color: black;
+} */
+
+div{
+    height: 100px;
+    width: 100px;
+    background-color: dodgerblue;
+    color: white;
+    border: 1px solid black;
+    
+
 }

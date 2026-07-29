@@ -32,16 +32,25 @@
 
 // div.innerText = "Hello";
 
-let newBtn = document.createElement("button");
-newBtn.innerText = "Click me";
-console.dir(newBtn);
+// let newBtn = document.createElement("button");
+// newBtn.innerText = "Click me";
+// console.dir(newBtn);
 
-let para = document.querySelector("p");
-para.after(newBtn);
+// let para = document.querySelector("p");
+// para.after(newBtn);
 
 
-let newHeading = document.createElement("h1");
-newHeading.innerHTML = "<i>Learning AI Engineering!</i>";
-document.querySelector("body").prepend(newHeading);
+// let newHeading = document.createElement("h1");
+// newHeading.innerHTML = "<i>Learning AI Engineering!</i>";
+// document.querySelector("body").prepend(newHeading);
 
-para.remove();
+// para.remove();
+
+let btn1 = document.querySelector("#btn1");
+
+btn1.onclick = () => {
+    console.log("btn1 was clicked");
+    let a = 25;
+    a++;
+    console.log(a);//26
+}
