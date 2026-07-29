@@ -7,3 +7,17 @@
     text-align: center;
     background-color: aquamarine;
 }
+
+.content{
+    color: white;
+    background-color: black;
+    width: 250px;
+    text-align: center;
+    height: 25px;
+    
+}
+
+.newClass{
+    background-color: green;
+
+}
