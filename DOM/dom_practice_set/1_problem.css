@@ -1,4 +1,4 @@
-.box{
+/* .box{
     height: 100px;
     width: 100px;
     border-color: black;
@@ -20,4 +20,25 @@
 .newClass{
     background-color: green;
 
+} */
+
+#mode {
+    width: 100px;
+    height: 30px;
+    vertical-align: center;
+    background-color: grey;
+    color: white;
+    border: solid black bold;
+}
+
+.dark{
+    background-color: black;
+    color: white;
+   
+}
+
+.light{
+    background-color: white;
+    color: black;
+    
 }

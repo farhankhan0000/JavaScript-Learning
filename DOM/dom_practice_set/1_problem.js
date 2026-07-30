@@ -9,16 +9,39 @@
 //     divs[i].innerText = `new unique value ${i}`;
 // }
 
-let newBtn = document.createElement("button");
-newBtn.innerText = "Click me!";
+// let newBtn = document.createElement("button");
+// newBtn.innerText = "Click me!";
 
-newBtn.style.color = "white";
-newBtn.style.backgroundColor = "red";
+// newBtn.style.color = "white";
+// newBtn.style.backgroundColor = "red";
 
-document.querySelector("body").prepend(newBtn);
+// document.querySelector("body").prepend(newBtn);
 
 
 
-// q2
+// // q2
 
-let para = document.querySelector("p");
+// let para = document.querySelector("p");
+
+let modeBtn = document.querySelector("#mode");
+let currmode = "light";
+let body = document.querySelector("body")
+
+modeBtn.addEventListener("click", () => {
+    if(currmode == "light"){
+        currmode = "dark";
+        // document.querySelector("body").style.backgroundColor = "black";
+        body.classList.add("dark");
+        body.classList.remove("light");
+    }
+    else{
+        currmode = "light";
+        // document.querySelector("body").style.backgroundColor = "white";
+        body.classList.add("light");
+        body.classList.remove("dark");
+    }
+    
+});
+
+
+
