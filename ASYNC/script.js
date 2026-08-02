@@ -51,23 +51,23 @@
 // })
 
 
-function getData(dataId){//2S
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            console.log("data", dataId);
-            resolve("Success");
-        }, 3000);
-    });
-}
+// function getData(dataId){//2S
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             console.log("data", dataId);
+//             resolve("Success");
+//         }, 3000);
+//     });
+// }
 
 
-getData(1).then((res) => {
-    return getData(2);
-}).then((res) => {
-    return getData(3);
-}).then((res) => {
-    console.log(res);
-})
+// getData(1).then((res) => {
+//     return getData(2);
+// }).then((res) => {
+//     return getData(3);
+// }).then((res) => {
+//     console.log(res);
+// })
 
 // // CallBack Hell
 // getData(1, () =>{
@@ -114,3 +114,18 @@ getData(1).then((res) => {
 // p2.then((res) => {
 //     console.log(res);
 // })
+
+
+function api(){
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log("Weather Data");
+            resolve(200);
+        }, 2000);
+    })
+}
+
+async function getWeatherData(){
+    await api(); //1st
+    await api(); //2nd
+}
