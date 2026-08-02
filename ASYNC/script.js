@@ -39,18 +39,40 @@
 //  console.log("Child");
 // }
 
-let promise = new Promise((resolve, reject) =>{
-    console.log("I am a Promise");
-    // resolve("success");
-    reject("Some error");
-});
+// let promise = new Promise((resolve, reject) =>{
+//     console.log("I am a Promise");
+//     // resolve("success");
+//     // reject("Some error");
+// });
+
+const getPromise = () =>{
+    return new Promise((resolve, reject) => {
+        console.log("I am a Promise");
+        reject("network error");
+        // resolve("success");
+    });
+};
+
+let promise = getPromise();
+promise.then((res) => {
+    console.log("Promise fullfilled", res);
+})
+
+promise.catch((err) => {
+    console.log("Rejected", err);
+})
+
+
 // function getData(dataId, getNextData){//2S
-//     setTimeout(() =>{
-//         console.log("data = ", dataId);
-//         if(getNextData){
-//             getNextData();
-//         }
-//     }, 2000);
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             console.log("data", dataId);
+//             resolve("Success");
+//             if(getNextData){
+//                 getNextData();
+//             }
+//         }, 5000);
+//     });
 // }
 
 // // CallBack Hell
