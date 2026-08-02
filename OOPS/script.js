@@ -60,23 +60,24 @@
 // console.log(lexus);
 
 
-class Parent{
-    hello () {
-        console.log("hello");
-    }
-}
+// class Parent{
+//     hello () {
+//         console.log("hello");
+//     }
+// }
 
-class Child extends Parent{
+// class Child extends Parent{
 
-}
+// }
 
-let obj = new Child();
-obj.hello();
+// let obj = new Child();
+// obj.hello();
 
 
 class Person{
-    constructor(){
+    constructor(name){
         this.species = "homo sapiens";
+        this.name = name;
     }
     eat () {
         console.log("eat");
@@ -88,14 +89,20 @@ class Person{
 }
 
 class Engineer extends Person{
+    constructor(branch, name){
+        super(name);
+        this.branch = branch;
+    }
     work() {
         console.log("build something");
     }
 }
 
-let Farhan = new Engineer();
+let Farhan = new Engineer("Ai Engineer", "Farhan");
 
+console.log(Farhan.name);
 console.log(Farhan.species);
+console.log(Farhan.branch);
 Farhan.eat();
 Farhan.sleep();
 Farhan.work();
