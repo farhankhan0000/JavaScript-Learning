@@ -51,16 +51,36 @@
 // })
 
 
-// function getData(dataId){//2S
-//     return new Promise((resolve, reject) => {
-//         setTimeout(() => {
-//             console.log("data", dataId);
-//             resolve("Success");
-//         }, 3000);
-//     });
+function getData(dataId){//2S
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log("data", dataId);
+            resolve("Success");
+        }, 3000);
+    });
+}
+
+
+// async function getAllData(){
+//     console.log("getting data1.....");
+//     await getData(1);
+//     console.log("getting data2.....");
+//     await getData(2);
+//     console.log("getting data3.....");
+//     await getData(3);
 // }
 
+(async function (){
+    console.log("getting data1.....");
+    await getData(1);
+    console.log("getting data2.....");
+    await getData(2);
+    console.log("getting data3.....");
+    await getData(3);
+})();
 
+
+//Promise Chain
 // getData(1).then((res) => {
 //     return getData(2);
 // }).then((res) => {
@@ -116,16 +136,16 @@
 // })
 
 
-function api(){
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            console.log("Weather Data");
-            resolve(200);
-        }, 2000);
-    })
-}
+// function api(){
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             console.log("Weather Data");
+//             resolve(200);
+//         }, 2000);
+//     })
+// }
 
-async function getWeatherData(){
-    await api(); //1st
-    await api(); //2nd
-}
+// async function getWeatherData(){
+//     await api(); //1st
+//     await api(); //2nd
+// }
