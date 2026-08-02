@@ -39,22 +39,63 @@
 // karanArjun4.__proto__ = employee;
 
 
-class ToyotaCar{
-    constructor(brand, mileage){
-        console.log("Creating new object");
-        this.brand = brand;
-        this.mileage = mileage;
-    }
-    start(){
-        console.log("start");
-    }
+// class ToyotaCar{
+//     constructor(brand, mileage){
+//         console.log("Creating new object");
+//         this.brand = brand;
+//         this.mileage = mileage;
+//     }
+//     start(){
+//         console.log("start");
+//     }
 
-    stop(){
-        console.log("stop");
+//     stop(){
+//         console.log("stop");
+//     }
+// }
+
+// let fortuner = new ToyotaCar("fortuner", 10);
+// console.log(fortuner);
+// let lexus = new ToyotaCar("lexus", 12);
+// console.log(lexus);
+
+
+class Parent{
+    hello () {
+        console.log("hello");
     }
 }
 
-let fortuner = new ToyotaCar("fortuner", 10);
-console.log(fortuner);
-let lexus = new ToyotaCar("lexus", 12);
-console.log(lexus);
+class Child extends Parent{
+
+}
+
+let obj = new Child();
+obj.hello();
+
+
+class Person{
+    constructor(){
+        this.species = "homo sapiens";
+    }
+    eat () {
+        console.log("eat");
+    }
+
+    sleep () {
+        console.log("sleep");
+    }
+}
+
+class Engineer extends Person{
+    work() {
+        console.log("build something");
+    }
+}
+
+let Farhan = new Engineer();
+
+console.log(Farhan.species);
+Farhan.eat();
+Farhan.sleep();
+Farhan.work();
