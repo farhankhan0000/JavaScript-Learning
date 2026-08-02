@@ -74,35 +74,68 @@
 // obj.hello();
 
 
-class Person{
-    constructor(name){
-        this.species = "homo sapiens";
+// class Person{
+//     constructor(name){
+//         this.species = "homo sapiens";
+//         this.name = name;
+//     }
+//     eat () {
+//         console.log("eat");
+//     }
+
+//     sleep () {
+//         console.log("sleep");
+//     }
+// }
+
+// class Engineer extends Person{
+//     constructor(branch, name){
+//         super(name);
+//         this.branch = branch;
+//     }
+//     work() {
+//         console.log("build something");
+//     }
+// }
+
+// let Farhan = new Engineer("Ai Engineer", "Farhan");
+
+// console.log(Farhan.name);
+// console.log(Farhan.species);
+// console.log(Farhan.branch);
+// Farhan.eat();
+// Farhan.sleep();
+// Farhan.work();
+
+// Q1
+
+let Data = "Secret Information";
+
+
+class User{
+    constructor(name, email){
         this.name = name;
-    }
-    eat () {
-        console.log("eat");
+        this.email = email;
     }
 
-    sleep () {
-        console.log("sleep");
+    viewData(){
+        console.log("Data = ", Data);
+    }
+
+}
+
+class Admin extends User{
+    constructor(name, email){
+        super(name, email);
+    }
+    editData(){
+        Data = "Some new Value";
+        console.log("Data = ", Data);
     }
 }
 
-class Engineer extends Person{
-    constructor(branch, name){
-        super(name);
-        this.branch = branch;
-    }
-    work() {
-        console.log("build something");
-    }
-}
+let student1 = new User("Farhan", "farhan@123");
+let student2 = new User("Anonymous", "anonymous@123");
+let student3 = new Admin("Anonymous1", "anonymous@786");
 
-let Farhan = new Engineer("Ai Engineer", "Farhan");
-
-console.log(Farhan.name);
-console.log(Farhan.species);
-console.log(Farhan.branch);
-Farhan.eat();
-Farhan.sleep();
-Farhan.work();
+student3.editData();
